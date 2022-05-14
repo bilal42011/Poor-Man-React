@@ -1,0 +1,10 @@
+
+{
+  "verbose":true,
+  "watch": ["src"],
+  "ext":"tsx js",
+  "execMap": {
+    "tsx":"npm run tsc && node dist/hello.js"
+  },
+  "ignore": ["src/**/*.spec.ts"]      
+}

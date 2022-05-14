@@ -1,0 +1,27 @@
+let path=require("path");
+module.exports={
+entry:{
+    main:path.resolve(__dirname,"src/hello.tsx")
+},
+mode:"development",
+output:{
+path:path.resolve(__dirname,"dist"),
+filename:"[name].[contenthash].bundle.js",
+clean:true
+},
+module:{
+    rules:[
+        {
+            test:/\.tsx$/,
+            use:"ts-loader"
+        },
+        {
+            test:/\.png$/,
+            type:"asset/resource"          
+        }    
+    ]
+},
+resolve:{
+    extensions:[".tsx",".png","..."]
+}
+}
